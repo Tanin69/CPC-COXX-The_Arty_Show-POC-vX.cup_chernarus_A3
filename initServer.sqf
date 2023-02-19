@@ -1,0 +1,1 @@
+[opfor, blufor] execVM "initsl2a.sqf";
