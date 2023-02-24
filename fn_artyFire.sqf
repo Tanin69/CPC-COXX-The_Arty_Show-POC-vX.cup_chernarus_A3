@@ -10,12 +10,17 @@ while {true} do {
 		private _nbRounds = _fireMissionData#2;
 		private _min = 5;
 		private _max = 10;
-		systemChat format["SL2A IA: mission de tir sur position %1 et rayon %2",_firePos, _fireRadius];
+		
+		if (sl2a_DBG) then {
+			[format["SL2A IA: mission de tir sur position %1 et rayon %2",_firePos, _fireRadius]] remoteExec ["systemChat"];
+		};
 
 		//Gestion de la zone d'interdiction de feu. Si une unité amie est dans le rayon de tir (transmis en paramètre) + 100 m., l'ordre de tir est annulé
 		private _unitsInNFZ = (units opfor) select {_x distance2D _firePos <= _fireRadius + 100};
 		if (count _unitsInNFZ > 0) exitWith {
-			systemChat format["SL2A IA: mission de tir annulée (unités amies dans la zone de danger)"];
+			if (sl2a_DBG) then {
+				[format["SL2A IA: mission de tir annulée (unités amies dans la zone de danger)"]] remoteExec ["systemChat"];
+			};
 		};
 
 		//On répartit le nombre de tirs sur chaque unité...
