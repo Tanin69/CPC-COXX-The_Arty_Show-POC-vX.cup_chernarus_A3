@@ -1,0 +1,60 @@
+//overViewPicture       = "loadScreen.jpg";
+//overViewPictureLocked = "loadScreen.jpg";
+
+
+// - Texte de description
+overviewText = "Contre-batterie";
+overviewTextLocked = "";
+
+// - Author
+author = "tanin69"; 
+
+// - Type de mission (informatif)
+class Header
+{
+	gameType = Coop; // MP mission type
+	minPlayers = 3;
+	maxPlayers = 9;
+};
+
+// Affichage durant l'écran de chargement
+// - Nom de la mission
+onLoadName = "The Arty Show - POC"; 
+// - Texte de description
+onLoadMission = "Vue en coupe d'un artichaut de calibre 82 mm";
+// - Image
+loadScreen = "loadScreen.jpg";
+
+// Autres paramètres de la mission
+enableDebugConsole = 1;
+saving = 0;
+
+allowFunctionsRecompile = 1;
+
+class CfgFunctions 
+{
+	#include "Cfg\cfgFunctions.hpp"
+};
+
+class CfgDebriefing
+{  
+	class End1
+	{
+		title = "Mission réussie !";
+		subtitle = "";
+		description = "Vous avez dit ce que vous alliez faire, vous avez fait ce que vous avez dit... Et vous êtes vivant(s).";
+		pictureBackground = "";
+		picture = "fail.jpg";
+		//pictureColor[] = {1,0.8,0.0,1};
+	};
+
+	class End2
+	{
+		title = "C'est un échec !";
+		subtitle = "";
+		description = "Vous ferez mieux la prochaine fois.";
+		pictureBackground = "";
+		picture = "fail.jpg";
+		//pictureColor[] = {0.6,0.1,0.2,1};
+	};
+};

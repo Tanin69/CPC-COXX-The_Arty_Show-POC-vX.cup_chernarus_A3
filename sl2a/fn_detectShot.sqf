@@ -36,7 +36,7 @@ if (_caliber > 82) then {
 //Ajuste la probabilité de détection en fonction de la distance
 private _probaEnreg = [_distance,_sensiv] call invSquare;
 //Ajuste la probabilité de détection en fonction du relief
-private _reliefEffect = [_detectGrp, _unit] call getTerrainThickness;
+private _reliefEffect = [_vehDetect, _unit] call getTerrainThickness;
 _probaEnreg = _probaEnreg - (_reliefEffect/10000);
 if (sl2a_DBG) then {
 	[format ["SL2A: effet de relief => %1 (%2 oté de la proba)", _reliefEffect, _reliefEffect/10000]] remoteExec ["systemChat"];

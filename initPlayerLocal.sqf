@@ -1,3 +1,8 @@
+enableEngineArtillery false;
+
+//Affiche le briefing
+[] execVM "briefing.sqf";
+
 /* Fonctions ACE self pour la gestion du SL2A */
 
 	_rootSl2a = [
