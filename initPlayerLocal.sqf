@@ -1,4 +1,4 @@
-enableEngineArtillery false;
+//enableEngineArtillery false;
 
 //Affiche le briefing
 [] execVM "briefing.sqf";

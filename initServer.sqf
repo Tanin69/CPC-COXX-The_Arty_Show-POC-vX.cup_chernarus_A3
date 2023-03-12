@@ -25,7 +25,7 @@ while {alive M1119} do {
 			-> Ammo handling : disabled
 		Réglages de ACE Artillery / mk6 mortar :
 			-> Allow mk6 computer : false (évidemment)
-			-> Use ammuniation handling : false
+			-> Use ammunition handling : false
 		Réglages de ACE Logistics / Rearm :
 			-> Rearm amount : Entire Magazine
 			-> Ammunition supply : Only specific Magazines

@@ -86,7 +86,6 @@ if (sl2aPl_side isNotEqualTo false) then {
 					[format ["SL2A : tir filtré pour arme: %1.", _weapon]] remoteExec ["systemChat"];
 				};		
 			};
-			
 			//Detection by AI
 			if (sl2aIA_side isNotEqualTo false) then {
 				[_unit, sl2aIA_side, sl2aIA_detectGrp,sl2aIA_sensiv,false,_ammo] call detectShot;

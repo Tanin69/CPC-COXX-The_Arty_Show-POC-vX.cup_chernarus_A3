@@ -82,14 +82,14 @@ if (random 1 < _probaEnreg) then {
 					params ["_estError", "_estPos", "_unitDetect", "_detectGrp", "_caliber"];
 					if (vehicle player isEqualTo _detectGrp) then {
 						vehicle player vehicleChat format ["Tir de calibre %1 localisé. ECP: %2", _caliber, _estError]; 
-						private _mk_zn = createMarkerLocal [(format ["mk_sl2a_border_%1_%2",_estError,_unitDetect]),_estPos,4];
+						private _mk_zn = createMarkerLocal [(format ["mk_sl2a_border_%1_%2_%3",_estError,_unitDetect,time]),_estPos,4];
 						_mk_zn setMarkerShapeLocal "ELLIPSE";
 						_mk_zn setMarkerBrushLocal "border";
 						_mk_zn setMarkerSizeLocal [_estError,_estError];
 						if (_estError isEqualTo 50) then {
 							_mk_zn setMarkerColorLocal "ColorRed";	
 						};
-						_mk_zn = createMarkerLocal [(format ["mk_sl2a_zone_%1_%2",_estError,_unitDetect]),_estPos,4];
+						_mk_zn = createMarkerLocal [(format ["mk_sl2a_zone_%1_%2_%3",_estError,_unitDetect,time]),_estPos,4];
 						_mk_zn setMarkerShapeLocal "ELLIPSE";
 						_mk_zn setMarkerBrushLocal "Solid";
 						_mk_zn setMarkerSizeLocal [_estError,_estError];
@@ -97,7 +97,7 @@ if (random 1 < _probaEnreg) then {
 						if (_estError isEqualTo 50) then {
 							_mk_zn setMarkerColorLocal "ColorRed";	
 						};
-						private _mk_pos = createMarkerLocal [(format ["mk_sl2a_pos_%1_%2",_estError,_unitDetect]),_estPos,4];
+						private _mk_pos = createMarkerLocal [(format ["mk_sl2a_pos_%1_%2_%3",_estError,_unitDetect,time]),_estPos,4];
 						_mk_pos setMarkerTypeLocal "Contact_dot1";
 						_mk_pos setMarkerColorLocal "ColorRed";
 						_mk_pos setMarkerTextLocal format ["Cal. %1 | %2", _caliber, str _estError];	
