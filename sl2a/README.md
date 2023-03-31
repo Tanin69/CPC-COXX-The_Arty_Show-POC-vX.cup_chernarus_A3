@@ -23,8 +23,7 @@ Le SL2A est un système embarqué dans un véhicule terrestre. Le SL2A ne foncti
 
 Une fonction (interaction ACE sur soi-même) permet de purger tout ou partie des marqueurs.
 
-**Important** : la précision de localisation maximale du SL2A est de 50 m. Quand une détection de cette précision est faite, le marqueur a un fond rouge. Il faut obligatoirement purger le SL2A à ce moment, sans quoi aucune autre détection de 50 m. ne sera marquée.
-
+**Important** : la précision de localisation maximale du SL2A est de 50 m. Quand une détection de cette précision est faite, le marqueur a un fond rouge.
 ### Caractéristiques techniques
 
 #### Effet lié à la distance entre le système et la pièce qui tire
